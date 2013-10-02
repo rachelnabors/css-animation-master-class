@@ -76,7 +76,7 @@
 
 <section class="slide cover iwerks">
   <div class="vtop">
-    <h2 class="slide-title">Ubb Iwerks</h2>
+    <h2 class="slide-title">Ub Iwerks</h2>
     <p class="slide-tagline">Walt's Wozniak</p>
   </div>
 </section>
@@ -125,7 +125,7 @@
 <section class="slide cover quote-disney"></section>
 
 <section class="slide">
-  <h2>Remember these when you get lost</h2>
+  <h2>Tenants to Create by</h2>
   <ul>
     <li class="slide"><strong>Technology</strong> Pick winners.</li>
     <li class="slide"><strong>Tenacity</strong> Get back into the ring.</li>
@@ -150,11 +150,13 @@ The Future of Animation and Web Development
   Web Apps for Kindle Fire, Windows, FireFox OS
   The Browser Is Not a Document Reader
 
+    <li><a href="https://medium.com/design-ux/926eb80d64e3">How could science apply to <abbr title="User Interface">UI</abbr> design?</a></li>
+
  -->
 
 <section class="slide">
   <div class="vcenter">
-    <h1>Let us begin</h1>
+    <h1>Let's begin!</h1>
     <p class="tagline">History lesson over</p>
   </div>
 </section>
@@ -166,8 +168,9 @@ The Future of Animation and Web Development
     <h3>What we are covering</h3>
     <ul>
       <li>animating and transitioning stuff with CSS3</li>
-      <li>playing music with the web audio API and HTML5</li>
+      <li>playing music with the HTML5</li>
       <li>handling play state with JS</li>
+      <li>extending animations with JS</li>
       <li>performance tools</li>
     </ul>
   </div>
@@ -178,12 +181,12 @@ The Future of Animation and Web Development
   <h2>What we are NOT covering</h2>
   <ul>
     <li>Canvas</li>
-    <li>SVG</li>
-    <li>using JavaScript to move or otherwise animate elements</li>
-    <li>CSS vendor prefixes</li>
+    <li>SVG animations</li>
+    <li>CSS vendor prefixes (<code>-webkit-</code> is all you need)</li>
     <li>mobile</li>
     <li>retina displays</li>
   </ul>
+  <p class="slide">That workshop is for 2014!</p>
 </section>
 
 <section class="slide">
@@ -202,7 +205,7 @@ The Future of Animation and Web Development
 <section class="slide">
   <h2>Our code lab environment</h2>
   <ul>
-    <li>Using <strong>Chrome</strong> because browser support is spotty</li>
+    <li>Using <strong>Chrome</strong>.</li>
     <li>Using <strong><a href="http://leaverou.github.com/prefixfree/" target="_blank">-prefix-free</a></strong> instead of adding vendor prefixes.</li>
     <li>Using <strong>jQuery</strong> because everyone knows jQuery.</li>
   </ul>
@@ -213,7 +216,8 @@ The Future of Animation and Web Development
   <ul>
     <li class="slide">Not all of these techniques will work in all browsers&mdash;<em>yet.</em> <strong>Look at your numbers.</strong></li>
     <li class="slide">-prefix-free is for demos only. Use <a href="http://sass-lang.com/" target="_blank">Sass</a>/<a href="http://compass-style.org/" target="_blank">Compass</a> to handle vendor prefixes in production.</li>
-    <li class="slide">I recommend Eric Myer's Compass plugin <a href="https://github.com/ericam/compass-animate" target="_blank">compass-animate</a></li>
+    <li class="slide">I recommend Eric Myer's Compass extension <a href="https://github.com/ericam/compass-animate" target="_blank">compass-animate</a>&hellip;</li>
+    <li class="slide">&hellip;and my Compass extension <a href="https://github.com/Team-Sass/animation-studio" target="_blank">Animation Studio</a></li>
   </ul>
 </section>
 
@@ -276,19 +280,23 @@ transition-duration: 1s, 3s;</pre>
   <p>Start Coding! <a href="http://codepen.io/rachelnabors-teaching/pen/koEjl?editors=110" target="_blank">codepen.io/rachelnabors-teaching/pen/koEjl</a></p>
 </section>
 
-<section class="slide">
+<section class="slide timing-functions cover">
   <div class="vcenter">
-    <h1>Focus on&hellip;</h1>
-    <h2>Timing Functions</h2>
+    <h1><em>Focus on </em>Cushioning, Easing, Timing Functions</h1>
   </div>
+</section>
+
+<section class="slide">
+  <h2>&ldquo;Cushioning&rdquo; in Animation</h2>
+  <p>In animation, &ldquo;timing functions&rdquo; are called &ldquo;cushioning&rdquo;</p>
+  <iframe width="420" height="315" src="http://www.youtube.com/embed/yyRUrDUHLPo?rel=0" frameborder="0" allowfullscreen></iframe>
+  <p><strong>Science!</strong> A falling ball picks up speed due to gravity. A rolling ball slows down from friction.</p>
+  <!-- TODO: Dropping ball exercise-->
 </section>
 
 <section class="slide">
   <h2>Timing Functions</h2>
   <h3>&ldquo;Cushioning&rdquo;</h3>
-  <p>In animation, &ldquo;timing functions&rdquo; are called &ldquo;cushioning&rdquo;</p>
-  <p><strong>Science!</strong> A falling ball picks up speed due to gravity. A rolling ball slows down from friction. How could science apply to <abbr title="User Interface">UI</abbr> design?</p>
-  <div class="slide">
     <p>Try rolling your ball with some these timing functions:</p>
     <ul>
       <li><code>linear</code></li>
@@ -297,10 +305,10 @@ transition-duration: 1s, 3s;</pre>
       <li><code>ease-in-out</code></li>
       <li><code>cubic-bezier(<strong>ROLL YOUR OWN!</strong>)</code></li>
     </ul>
-  </div>
-  <div class="slide">
-    <p>Timing functions are defined by a bezier curve, which means you can make your own at <a href="http://cubic-bezier.com/" target="_blank">cubic-bezier.com</a>! Give it a try!</p>
-  </div>
+    <p class="slide">
+      Timing functions are defined by a bezier curve, which means you can make your own at <a href="http://cubic-bezier.com/" target="_blank">cubic-bezier.com</a>! Give it a try!
+    </p>
+    <p class="slide">Check out this visual <a href="http://easings.net/">Easings Cheat Sheet</a></p>
 </section>
 
 <section class="slide">
@@ -341,7 +349,6 @@ transition-duration: 1s, 3s;</pre>
     <h3>Loaded</h3>
     <p>jQuery's <code>$(window).load()</code> fires when the browser has all the CSS, images, and JS in place and has painted the window.</p>
   </div>
-  <p class="slide"><strong>Help!</strong> Still looking for a pure JS solution for this. (Reward of cookies.)</p>
   <div class="slide">
     <p>Hook into this event to swap the <code>.loading</code> class for <code>.loaded</code> or <code>.playing</code> like so:</p>
 
@@ -392,6 +399,20 @@ transition-duration: 1s, 3s;</pre>
   <script async src="http://codepen.io/assets/embed/ei.js"></script>
  </section>
 
+<section class="slide cover scene-transitions">
+    <div class="vtop">
+      <h1 class="slide-title"><em>A word about </em>Scene Transitions</h1>
+    </div>
+</section>
+
+<section class="slide">
+  <h2>Scene Transitions</h2>
+  <h3>Changing Mindsets and Changing Scenes</h3>
+  <iframe width="420" height="315" src="http://www.youtube.com/embed/VqOJ2MUg7VA?rel=0" frameborder="0" allowfullscreen></iframe>
+  <p>Scene transitions signal to audiences a change in mood, time, or location (or sometimes just a commercial break!)</p>
+  <p class="slide">Think of them like a period between sentences or a space between paragraphs.</p>
+</section>
+
 <section class="slide">
   <h2>CSS Transitions</h2>
   <h3>Exercise: Showing and Hiding</h3>
@@ -437,7 +458,11 @@ transition-duration: 1s, 3s;</pre>
   <p>Check out that support: <a href="http://caniuse.com/#feat=css-transitions">caniuse.com/#feat=css-transitions</a></p>
 
   <h3>Resources</h3>
-  <p><a href="http://coding.smashingmagazine.com/2013/04/26/css3-transitions-thank-god-specification/" target="_blank">Thank God We Have a Specification!</a></p>
+  <ul>
+    <li><a href="http://coding.smashingmagazine.com/2013/04/26/css3-transitions-thank-god-specification/" target="_blank">Thank God We Have a Specification!</a> by Rodney Rehm</li>
+    <li><a href="http://www.css3files.com/transition/">CSS3 Files: Transitions</a>&mdash;a handy cheat sheet</li>
+    <li>Visual <a href="http://easings.net/">Easings Cheat Sheet</a></li>
+  </ul>
 </section>
 
 <section class="slide">

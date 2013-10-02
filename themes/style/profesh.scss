@@ -237,6 +237,28 @@ $grey: #858585;
 		}
 	} 
 	
+	.cover {
+		.vcenter {
+			color: $canvas;
+			background: rgba($canvas_black,.5);
+			box-sizing: border-box;
+			padding: .5em 48px 1em;
+			text-shadow: 0px 1px 3px rgba($canvas_black, 0.6);
+			line-height: 3em;
+		}
+		.vcenter em, .vtop em {
+			font-style: normal;
+			display: block;
+			font-family: $franklin;
+			font-weight: 400;
+			font-size: .4em;
+		}
+		.vtop em {
+			font-size: .3em;
+			line-height: 0;
+		}
+	}
+
 	.deck-prev-link, .deck-next-link {
 		background:$grey;
 		font-family:serif; // sans-serif arrows x-browser fail
@@ -288,7 +310,7 @@ $grey: #858585;
 }
 
 .cover.hanna {
-	background: url(../../img/cover_hanna.jpg) no-repeat 0 0;
+	background: url(../../img/cover_hanna.jpg) no-repeat center center;
 	background-size: cover;
 }
 
@@ -300,4 +322,16 @@ $grey: #858585;
 .cover.quote-disney {
 	background: url(../../img/quote_disney.jpg) no-repeat 0 0;
 	background-size: cover;
+}
+
+// Splashy slides
+
+.cover.timing-functions {
+	background: url(../../img/cover_easing.png) no-repeat 0 0;
+	background-size: cover;
+}
+
+.cover.scene-transitions {
+	background: #000 url(../../img/cover_transitions.png) no-repeat center center;
+	background-size: auto 100%;
 }
