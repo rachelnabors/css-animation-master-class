@@ -67,15 +67,52 @@
       transform: none; }
       .deck-container .slide h1.vcenter {
         margin: 0; }
-    .deck-container .slide .vcenter h1, .deck-container .slide .vcenter h2 {
+    .deck-container .slide .vtop .slide-title {
+      font-family: "OstrichSansMedium", sans-serif;
+      font-size: 4em;
+      font-weight: normal;
+      color: #dfeff6;
+      box-sizing: border-box;
+      background: rgba(20, 31, 49, 0.5);
+      border: 0;
+      margin: 0;
+      padding: .25em .25em;
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-shadow: 0px 1px 3px rgba(20, 31, 49, 0.6);
+      -webkit-transform: none;
+      -moz-transform: none;
+      -ms-transform: none;
+      -o-transform: none;
+      transform: none;
+      width: 100%; }
+    .deck-container .slide .vtop .slide-tagline {
+      color: #dfeff6;
+      background: rgba(20, 31, 49, 0.5);
+      box-sizing: border-box;
+      font-size: 2em;
+      text-shadow: 0px 1px 3px rgba(20, 31, 49, 0.6);
+      margin: 0;
+      left: 0;
+      position: absolute;
+      padding: 0 .5em;
+      bottom: 0;
+      width: 100%; }
+      .deck-container .slide .vtop .slide-tagline small {
+        font-size: .25em;
+        font-style: italic;
+        display: block; }
+    .deck-container .slide .vcenter h1, .deck-container .slide .vcenter h2, .deck-container .slide .vcenter .tagline {
       margin: 0;
       padding: 0; }
-    .deck-container .slide .vcenter h2 {
+    .deck-container .slide .vcenter h2, .deck-container .slide .vcenter .tagline {
       border: 0;
-      border-top: 3px solid #888888;
+      border-top: 3px solid #888;
       font-size: 3em;
-      padding-top: .25em; }
-    .deck-container .slide h2 {
+      padding-top: .25em;
+      text-align: left; }
+    .deck-container .slide h2, .deck-container .slide .tagline {
       font-family: "OstrichSansMedium", sans-serif;
       border-bottom-color: #858585;
       line-height: .8em; }
@@ -151,3 +188,31 @@
     background: #eee; }
   .deck-container.deck-menu .deck-current, .no-touch .deck-container.deck-menu .slide:hover {
     background: #ddf; }
+
+.cover.disney {
+  background: url(../../img/cover_disney.jpg) no-repeat 0 25%;
+  background-size: cover; }
+
+.cover.iwerks {
+  background: url(../../img/cover_iwerks.png) no-repeat 0 0;
+  background-size: cover; }
+
+.cover.technology {
+  background: url(../../img/cover_technology.jpg) no-repeat 0 0;
+  background-size: cover; }
+
+.cover.tezuka {
+  background: url(../../img/cover_tezuka.jpg) no-repeat 0 0;
+  background-size: cover; }
+
+.cover.hanna {
+  background: url(../../img/cover_hanna.jpg) no-repeat 0 0;
+  background-size: cover; }
+
+.cover.miyazaki {
+  background: url(../../img/cover_miyazaki.jpg) no-repeat 0 0;
+  background-size: cover; }
+
+.cover.quote-disney {
+  background: url(../../img/quote_disney.jpg) no-repeat 0 0;
+  background-size: cover; }

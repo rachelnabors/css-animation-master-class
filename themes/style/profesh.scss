@@ -92,20 +92,61 @@ $grey: #858585;
 			transform:none;
 			&.vcenter { margin: 0;}
 		}
+		.vtop {
+			.slide-title {
+				font-family: $ostmed;
+				font-size: 4em;
+				font-weight: normal;
+				color: $canvas;
+				box-sizing: border-box;
+				background: rgba($canvas_black,.5);
+				border: 0;
+				margin: 0;
+				padding: .25em .25em;
+				position: absolute;
+				top: 0; left: 0;
+				text-shadow: 0px 1px 3px rgba($canvas_black, 0.6);
+				-webkit-transform:none;
+				-moz-transform:none;
+				-ms-transform:none;
+				-o-transform:none;
+				transform:none;
+				width: 100%;
+			}
+			.slide-tagline {
+				color: $canvas;
+				background: rgba($canvas_black,.5);
+				box-sizing: border-box;
+				font-size: 2em;
+				text-shadow: 0px 1px 3px rgba($canvas_black, 0.6);
+				margin: 0;
+				left: 0;
+				position: absolute;
+				padding: 0 .5em;
+				bottom: 0;
+				width: 100%;
+				small { 
+					font-size: .25em;
+					font-style: italic;
+					display: block;
+				}
+			}
+		}
 		.vcenter {
-			h1, h2 { 
+			h1, h2, .tagline { 
 				margin: 0;
 				padding: 0;
 			}
-			h2 { 
+			h2, .tagline { 
 				border: 0;
 				border-top: 3px solid #888;
 				font-size: 3em;
 				padding-top: .25em;
+				text-align: left;
 			}
 		}
 
-		h2 {
+		h2, .tagline {
 			font-family: $ostmed;
 			border-bottom-color:$grey;
 			line-height: .8em;
@@ -223,4 +264,40 @@ $grey: #858585;
 			background:#ddf;
 		}
 	}
+}
+
+//History slides
+.cover.disney {
+	background: url(../../img/cover_disney.jpg) no-repeat 0 25%;
+	background-size: cover;
+}
+
+.cover.iwerks {
+	background: url(../../img/cover_iwerks.png) no-repeat 0 0;
+	background-size: cover;
+}
+
+.cover.technology {
+	background: url(../../img/cover_technology.jpg) no-repeat 0 0;
+	background-size: cover;
+}
+
+.cover.tezuka {
+	background: url(../../img/cover_tezuka.jpg) no-repeat 0 0;
+	background-size: cover;
+}
+
+.cover.hanna {
+	background: url(../../img/cover_hanna.jpg) no-repeat 0 0;
+	background-size: cover;
+}
+
+.cover.miyazaki {
+	background: url(../../img/cover_miyazaki.jpg) no-repeat 0 0;
+	background-size: cover;
+}
+
+.cover.quote-disney {
+	background: url(../../img/quote_disney.jpg) no-repeat 0 0;
+	background-size: cover;
 }
