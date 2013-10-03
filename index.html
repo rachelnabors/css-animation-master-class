@@ -1084,8 +1084,19 @@ The Future of Animation and Web Development
 
 <section class="slide">
   <h2>Interactions</h2>
-  <h3>Pausing with <code>getComputedStyle</code> and <code>getPropertyValue</code></h3>  
-  <!--TODO-->
+  <h3>Pausing with JavaScript</h3>  
+  <p>You could do this with plain JavaScript using <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.getComputedStyle" target="_blank"><code>getComputedStyle</code> and <code>getPropertyValue</code></a> in tandem. (Good example <a href="http://codepen.io/Zeaklous/pen/GokAm?editors=001" target="_blank">here</a>.)</p>
+  <ol class="slide">
+    <li>Record the current state of your animations/transitions</li>
+    <li>Remove the state class to put a stop to them.</li>
+    <li>Slap the recorded values on the animated objects.</li>
+  </ol>
+
+  <div class="slide">
+    <h3>Exercise: Pause the kitty</h3>
+    <p>Start coding! <a href="http://codepen.io/rachelnabors-teaching/pen/wszci?editors=011">codepen.io/rachelnabors-teaching/pen/wszci</a></p>
+    <p class="slide">I used jQuery like so: <a href="http://codepen.io/rachelnabors-teaching/pen/neBuy?editors=011" target="_blank">codepen.io/rachelnabors-teaching/pen/neBuy</a></p>
+  </div>
 </section>
 
 <section class="slide">
@@ -1177,11 +1188,12 @@ The Future of Animation and Web Development
 <section class="slide">
   <h2>Performance</h2>
   <h3>Investigating with Timeline</h3>
-  <p>Check out that <a href="http://cdpn.io/AvGhp">walk cycle</a> with the Dev Tools Timeline.</p>
+  <p>Check out <a href="http://rachelnabors.com/alice-in-videoland/book/">Alice in Videoland</a> with the Dev Tools Timeline.</p>
   <div class="slide">
     <h3>Resources</h3>
     <ul>
       <li><a href="https://www.google.com/intl/en/chrome/browser/canary.html" target="_blank">Chrome Canary</a> has the best tools for analyzing animations and painting.</li>
+      <li><a href="http://ariya.ofilabs.com/2013/06/optimizing-css3-for-gpu-compositing.html" target="_blank">Optimizing CSS3 for GPU Compositing</a></li>
       <li><a href="http://updates.html5rocks.com/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode" target="_blank">Profiling Long Paint Times with DevTools' Continuous Painting Mode</a></li>
       <li><a href="http://www.html5rocks.com/en/tutorials/speed/layers/" target="_blank">Accelerated Rendering in Chrome: the Layer Model</a></li>
     </ul>
@@ -1203,7 +1215,7 @@ The Future of Animation and Web Development
 
 <section class="slide">
   <h2>POP Quiz</h2>
-
+  <p>Raise your hands!</p>
   <ul>
     <li class="slide">What is the animation equivalent of timing-functions?</li>
     <li class="slide">What is the name of my alter ego's feline sidekick/co-star?</li>
@@ -1215,6 +1227,10 @@ The Future of Animation and Web Development
 
 <section class="slide">
   <h2>Just the Beginning!</h2>
+  <h3>People to Follow</h3>
+  <ul>
+    <!--TODO-->
+  </ul>
   <h3>Resources</h3>
   <ul>
     <li>These slides: <a href="http://share.RachelNabors.com/frontendmasters">share.RachelNabors.com/frontendmasters</a></li>
