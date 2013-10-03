@@ -1303,11 +1303,57 @@ The Future of Animation and Web Development
 <script src="extensions/iframes/deck.iframes.js"></script>
 <!-- <script type="text/javascript" src="extensions/presenterview/deck.presenterview.js"></script> -->
 <!-- Initialize the deck. You can put this in an external file if desired. -->
+
 <script>
-  $(function() {
+  // https://github.com/imakewebthings/deck.js/issues/134#issuecomment-25665129
+  // A patch to keep it from crashing iPads/running slowly. Hopefully not forever.
+  (function($, deck, undefined) {
+    var $d = $(document),
+    
+    toggleHorizon = function(base, fn) {
+      var slides = $[deck]('getSlides'),
+      opts = $[deck]('getOptions'),
+      min = base - opts.horizon,
+      max = base + opts.horizon,
+      i;
+      
+      min = min < 0 ? 0 : min;
+      max = max > slides.length ? slides.length : max;
+      
+      for (i = 0; i < min; i++) {
+        slides[i][fn](opts.classes.horizon);
+      }
+      for (i = max; i < slides.length; i++) {
+        slides[i][fn](opts.classes.horizon);
+      }
+    },
+    
+    updateHorizon = function(e, from, to) {
+      if (from || from === 0) {
+        toggleHorizon(from, 'removeClass');
+      }
+      
+      if (to || to === 0) {
+        toggleHorizon(to, 'addClass');
+      }
+    };
+    
+    $.extend(true, $[deck].defaults, {
+      classes: {
+        horizon: 'deck-horizon'
+      },
+      
+      horizon: 10
+    });
+    
+    $d.bind('deck.init', function() {
+      updateHorizon(null, null, 0);
+    })
+    .bind('deck.change', updateHorizon);
+
     $.deck('.slide');
-//        $.deck('iframes');
-  });
+  })(jQuery, 'deck');
+
 </script>
 </body>
 </html>

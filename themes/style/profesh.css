@@ -256,3 +256,6 @@
 .cover.parallax {
   background: black url(../../img/cover_parallax.jpg) no-repeat center center;
   background-size: auto 100%; }
+
+.deck-container:not(.deck-menu) .slide.deck-horizon {
+  display: none; }

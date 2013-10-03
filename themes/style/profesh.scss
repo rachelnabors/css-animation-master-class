@@ -356,3 +356,8 @@ $grey: #858585;
 	background: #000 url(../../img/cover_parallax.jpg) no-repeat center center;
 	background-size: auto 100%;
 }
+
+// For Horizon patch
+.deck-container:not(.deck-menu) .slide.deck-horizon {
+  display:none;
+}
