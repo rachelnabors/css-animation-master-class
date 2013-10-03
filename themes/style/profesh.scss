@@ -152,6 +152,11 @@ $grey: #858585;
 			line-height: .8em;
 		}
 
+		h2 { 
+			font-size: 1.5em;
+			margin-bottom: .25em;
+		}
+
 		h3 {
 			font-family: $ostblk;
 			color:#888;
@@ -329,9 +334,25 @@ $grey: #858585;
 .cover.timing-functions {
 	background: url(../../img/cover_easing.png) no-repeat 0 0;
 	background-size: cover;
+	color: $highlight; 
 }
 
 .cover.scene-transitions {
 	background: #000 url(../../img/cover_transitions.png) no-repeat center center;
+	background-size: auto 100%;
+}
+
+.cover.walk-cycle {
+	background: url(../../img/cover_walk-cycle.png) no-repeat center center;
+	background-size: cover;
+}
+
+.cover.cut-outs {
+	background: url(../../img/cover_cutouts.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.cover.parallax {
+	background: #000 url(../../img/cover_parallax.jpg) no-repeat center center;
 	background-size: auto 100%;
 }

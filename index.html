@@ -303,6 +303,7 @@ transition-duration: 1s, 3s;</pre>
       <li><code>ease-in</code></li>
       <li><code>ease-out</code></li>
       <li><code>ease-in-out</code></li>
+      <li><code>steps()</code></li>
       <li><code>cubic-bezier(<strong>ROLL YOUR OWN!</strong>)</code></li>
     </ul>
     <p class="slide">
@@ -597,8 +598,7 @@ transition-duration: 1s, 3s;</pre>
 <section class="slide">
   <h2>CSS Animations</h2>
   <h3>Meet <code>steps()</code></h3>
-  <p>The timing-function <code>steps()</code> is exclusive to animations</p>
-  <p class="slide">It splits a block of keyframes into equal steps, then hops between them.</p>
+  <p>It splits a block of keyframes into equal steps, then hops between them.</p>
   <p class="slide">The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/timing-function?redirectlocale=en-US&amp;redirectslug=CSS%2Ftiming-function#The_steps()_class_of_timing-functions">documentation</a> was written by mathy programmer types.</p>
   <p class="slide">Tab Atkins <a href="http://software.hixie.ch/utilities/js/live-dom-viewer/?saved=1993">tried to explain it</a>, but it's still easier to show you.</p>
   <div class="slide">
@@ -608,17 +608,19 @@ transition-duration: 1s, 3s;</pre>
   </div>
 </section>
 
+<section class="slide cover walk-cycle">
+  <div class="vtop">
+    <h2 class="slide-title">The Walk Cycle</h2>
+    <p class="slide-tagline">The &ldquo;Hello, world!&rdquo; of animation</p>
+  </div>
+</section>
+
+
 <section class="slide">
   <h2>CSS Animations</h2>
-  <h3>The Walk-Cycle</h3>
-  <p>The &quot;Hello World&quot; of animation.</p>
-
-  <figure>
-    <iframe width="420" height="315" src="http://www.youtube.com/embed/rPAIEVJy_SA" frameborder="0" allowfullscreen></iframe>
-    <figcaption>This is Rogue from <em>X-Men: Evolution</em> courtesy of Steve Gordon.</figcaption>
-  </figure>
-
-  <p class="slide"><a href="http://browse.deviantart.com/art/Walk-Run-FastRun-cycles-22461927" target="_blank">What it looks like on paper</a></p>
+  <h3>Walk-Cycles</h3>
+  <iframe width="420" height="315" src="http://www.youtube.com/embed/rPAIEVJy_SA?rel=0" frameborder="0" allowfullscreen></iframe>
+  <p>Rogue's walk-cycle kindly provided by master character designer and animator <a href="http://stevenegordon.com/">Steven K. Gordon</a>.</p>
 </section>
 
 <section class="slide">
@@ -636,19 +638,40 @@ transition-duration: 1s, 3s;</pre>
 
 <section class="slide">
   <h2>CSS Animations</h2>
+  <h3>Stacking animations</h3>
+  <p>You can run one animation <em>after</em> another using <code>animation-delay</code>, as in this example:</p>
+  <p data-height="266" data-theme-id="1478" data-slug-hash="zHeir" data-user="rachelnabors" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/rachelnabors/pen/zHeir'>From walk to run</a> by Rachel Nabors (<a href='http://codepen.io/rachelnabors'>@rachelnabors</a>) on <a href='http://codepen.io'>CodePen</a></p>
+  <script async src="http://codepen.io/assets/embed/ei.js"></script>
+
+  <p class="slide">Note the importance of <code>animation-fill-mode: forwards</code>. What would happen without it?</p>
+
+  <p class="slide">Start coding: <a href="http://codepen.io/rachelnabors-teaching/pen/Djcya?editors=010" target="_blank">codepen.io/rachelnabors-teaching/pen/Djcya</a></p>
+
+</section>
+
+<section class="slide cover cut-outs">
+  <div class="vtop">
+    <h2 class="slide-title">Cut-outs</h2>
+    <p class="slide-tagline">Saving time and money</p>
+  </div>
+</section>
+
+<section class="slide">
+    <h2>CSS Animations</h2>
+    <h3>Cut-outs</h3>
+    <p>Technique developed in Japan and by Hanna-Barbera to bring cartoons to TV rapidly.</p>
+    <p class="slide"><a href="https://www.youtube.com/watch?feature=player_detailpage&amp;v=6XNfawYyHXI#t=44s" target="_blank">A classic Disney animation with no cut-outs.</a></p>
+    <p class="slide"><a href="http://www.youtube.com/watch?feature=player_detailpage&amp;v=GYSfncB4peU#t=1060s" target="_blank">In Japan, the technique became the workhorse of animation thanks to Tezuka's pioneering efforts.</a></p>
+</section>
+
+<section class="slide">
+  <h2>CSS Animations</h2>
   <h3>Cut-outs</h3>
-  <p>&ldquo;Cut-outs&rdquo; were invented to save time and money.</p>
+  <p class="slide">Watch <a href="http://www.escapistmagazine.com/videos/view/the-big-picture/3854-The-Collar" target="_blank">The Importance of Yogi's Collar</a></p>
 
-  <p class="slide">Example 1: <a href="https://www.youtube.com/watch?feature=player_detailpage&amp;v=6XNfawYyHXI#t=44s" target="_blank">A classic Disney animation with no cut-outs.</a></p>
+  <p class="slide"><a href="http://en.wikipedia.org/wiki/Hanna-Barbera#Quality_controversy">This allowed a typical 10-minute short to be done with only 1,200 drawings instead of the usual 26,000.</a></p>
 
-  <p class="slide">Example 2: <a href="http://www.youtube.com/watch?feature=player_detailpage&amp;v=GYSfncB4peU#t=1060s" target="_blank">In Japan, the technique became the workhorse of animation thanks to Tezuka's pioneering efforts.</a></p>
-
-  <p class="slide">Example 3: <a href="http://www.youtube.com/watch?feature=player_detailpage&amp;v=fj71Rz3dsOY#t=200s" target="_blank">Hannah-Barbera used the technique to cut costs and production time on shows like <em>The Flinstones</em>.</a></p>
-  <!--NOTE "This allowed a typical 10-minute short to be done with only 1,200 drawings instead of the usual 26,000": http://en.wikipedia.org/wiki/Hanna-Barbera#Quality_controversy-->
-
-  <p class="slide">Example 4: <a href="http://www.youtube.com/watch?feature=player_detailpage&amp;v=jMCITIrDwC4#t=142s" target="_blank">A modern example from Japan.</a></p>
-
-  <p class="slide">Example 5: <a href="https://www.youtube.com/watch?feature=player_detailpage&amp;v=CVifFiCthdI#t=247s" target="_blank">Because we need more <em>Sailor Moon</em>.</a></p>
+  <p class="slide"><a href="http://www.youtube.com/watch?v=HM_yXH9dB70" target="_blank"><em>Polar Bear Cafe</em></a> and <a ref="http://www.youtube.com/watch?feature=player_detailpage&amp;v=H-GmcNz37wA#t=321" target="_blank"><em>Mushishi</em></a> show cutouts can be used to create active and beautiful scenes.</p>
 </section>
 
 <section class="slide">
@@ -656,7 +679,6 @@ transition-duration: 1s, 3s;</pre>
   <h3>Using Cut-outs in the Browser</h3>
   <p>We can use this technique to reduce the number of assets required to animate something on a page.</p>
   <pre class="codepen" data-height="300" data-type="result" data-href="pefly" data-user="rachelnabors" data-safe="true"><code></code><a href="http://codepen.io/rachelnabors/pen/pefly">Check out this Pen!</a></pre>
- 
 </section>
 
 <section class="slide">
@@ -664,29 +686,35 @@ transition-duration: 1s, 3s;</pre>
   <h3>Making Cut-outs</h3>
   <p>One more cool example:</p>
   <pre class="codepen" data-height="300" data-type="result" data-href="BIhvs" data-user="rachelnabors" data-safe="true"><code></code><a href="http://codepen.io/rachelnabors/pen/BIhvs">Check out this Pen!</a></pre>
+</section>
 
-  <div class="slide">
-    <p>Now it's your turn to have some fun!</p>
-
-    <p>Freestyle to your heart's content: <a href="http://codepen.io/rachelnabors/pen/ucBAz">codepen.io/rachelnabors/pen/ucBAz</a></p>
-  </div>
+<section class="slide cover parallax">
+    <div class="vtop">
+      <h2 class="slide-title">Parallax</h2>
+    </div>
 </section>
 
 <section class="slide">
   <h2>CSS Animations</h2>
   <h3>Parallax Backgrounds</h3>
 
+  <iframe width="420" height="315" src="http://www.youtube.com/embed/qIwtXkdWQ0o?rel=0" frameborder="0" allowfullscreen></iframe>
+  
   <p>Parallax is when multiple background layers are moved at different speeds to imitate how views change when moving.</p>
 
-  <p class="slide">Required the <a href="http://en.wikipedia.org/wiki/Multiplane_camera" target="_blank">multipane camera</a> invented by Ub Iwerks in 1933.</p>
-  <!-- NOTE It is realisitc, awe-inspiring, and (used to be) expensive. Snow White + Bambi, Disney's use of Iwerk's multipane camera, sheets of glass -->
+  <p class="slide">Required the <a href="http://en.wikipedia.org/wiki/Multiplane_camera" target="_blank">multiplane camera</a> invented by Ub Iwerks in 1933.</p>
+</section>
+
+
+<section class="slide">
+  <h2>CSS Animations</h2>
+  <h3>Parallax Examples</h3>
   
   <p class="slide">Example 1: <a href="https://www.youtube.com/watch?feature=player_detailpage&amp;v=OpnLHazdNAo#t=98s" target="_blank">Miyazaki uses the technique to establish beautiful countrysides in <em>Princess Mononoke</em>.</a> Watch the mountains and clouds.</p>
   <p class="slide">Example 2: <a href="https://www.youtube.com/watch?v=UibodUGoL4M" target="_blank">He uses it more subtly in <em>Howl's Moving Castle</em>.</a> Can you spot the parallax? Say &ldquo;parallax!&rdquo; every time you see it.</p>
   <p class="slide">Example 3: <a href="http://www.youtube.com/watch?v=2k79BYPNo2U&amp;desktop_uri=%2Fwatch%3Fv%3D2k79BYPNo2U" target="_blank">In games like <em>Sonic the Hedgehog, parallax is used to show speed and add depth</em>.</a></p>
-  <p class="slide">Example 4: <a href="https://www.youtube.com/watch?feature=player_detailpage&amp;v=qIwtXkdWQ0o#t=81s" target="_blank">Used masterfully to great effect in <em>The Last Unicorn</em>.</a></p>
-  <p class="slide">Example 5: <a href="https://www.youtube.com/watch?v=FQf-NkWz7Yo" target="_blank">Used subtly, it can add extra pop to dynamic designs.</a></p>
-  <p class="slide">Example 6: <a href="http://www.youtube.com/watch?v=_rkaiKYEkDQ" target="_blank">But it can be over-done.</a></p>
+  <p class="slide">Example 4: <a href="https://www.youtube.com/watch?v=FQf-NkWz7Yo" target="_blank">Used subtly, it can add extra pop to dynamic designs.</a></p>
+  <p class="slide">Example 5: <a href="http://www.youtube.com/watch?v=_rkaiKYEkDQ" target="_blank">But it can be over-done.</a></p>
 </section>
 
 
@@ -705,33 +733,45 @@ transition-duration: 1s, 3s;</pre>
   <h2>CSS Animations</h2>
   <h3>Exercise: Parallax Backgrounds with CSS Background-Position</h3>
 
-  <pre class="codepen" data-height="300" data-type="result" data-href="da57b81af5a65f4ba048a8242a39a7fd" data-user="rachelnabors" data-safe="true"><code></code><a href="http://codepen.io/rachelnabors/pen/oKbhB">Check out this Pen!</a></pre>
   <!--NOTE: The different background image lengths let us use one animation to move all the background images at different rates in the same interval of time.-->
   <figure>
     <img src="img/fig_parallax.png">
     <figcaption>The shorter images have less distance to cover in the same amount of time as the longer images, so they move slower.</figcaption>
   </figure>
 
-  <p>Start coding: <a href="http://codepen.io/rachelnabors-teaching/pen/qkeou" target="_blank">codepen.io/rachelnabors-teaching/pen/qkeou</a></p>
+  <p>Start coding: <a href="http://codepen.io/rachelnabors-teaching/pen/qkeou?editors=110" target="_blank">codepen.io/rachelnabors-teaching/pen/qkeou</a></p>
 </section>
 
-  
 <section class="slide">
   <h2>CSS Animations</h2>
-  <h3>Parallax Inspired Web Design</h3>
-  
+
+  <h3>Parallax Inspired Web Design</h3>  
   <ul>
     <li><a href="https://github.com/404" target="_blank">github's 404</a></li> 
     <li><a href="http://benthebodyguard.com/index.php" target="_blank">Ben the Bodyguard</a></li> 
     <li><a href="https://www.spotify.com/us/" target="_blank">Spotify</a></li>
-    <li><a href="http://www.george-gina-lucy.com/" target="_blank">Technically this counts.</a></li> 
     <li><a href="http://pitchfork.com/features/articles/9125-vampire-weekend/" target="_blank">Pitchfork's article on Vampire Weekend</a></li>
   </ul>
+</section>
+
+<section class="slide">
+  <h2>CSS Animations</h2>
+  <h3>Parallax in Interaction Design</h3>
+  <p>For your consideration: <em><a href="http://rachelnabors.com/alice-in-videoland/book/">Alice in Videoland</a></em>.</p>
+  <p class="slide">I used <a href="https://github.com/Prinzhorn/skrollr" target="_blank">skrollr.js</a> and <a href="http://imakewebthings.com/jquery-waypoints/" target="_blank">jQuery Waypoints</a> to hand parallax and state changes respectively.</p>
+  <p class="slide">Start coding: <a href="http://codepen.io/rachelnabors-teaching/pen/zuDmb" target="_blank">codepen.io/rachelnabors-teaching/pen/zuDmb</a></p>
+
+</section>
+
+<section class="slide">
+  <h2>CSS Animations</h2>
   <div class="slide">
     <h3>Resources</h3>
     <ul>
       <li><a href="http://www.html5rocks.com/en/tutorials/speed/parallax/" target="_blank">HTML5 Rocks article on performance by Paul Lewis: <em>Parallaxin'</em></a></li>
-      <li><a href="http://markdalgleish.com/projects/stellar.js/" target="_blank">Stellar.js</a> a JavaScript tool</li>
+      <li><a href="http://blog.teamtreehouse.com/multiplane-design-with-svgs-and-css-3d-transforms" target="_blank">Treehouse article on parallax via 3D transforms</a></li>
+      <li><a href="https://github.com/Prinzhorn/skrollr" target="_blank">Skrollr</a></li>
+      <li><a href="http://markdalgleish.com/projects/stellar.js/" target="_blank">Stellar.js</a>, another JavaScript/parallax tool</li>
     </ul>
   </div>
 </section>
@@ -741,6 +781,9 @@ transition-duration: 1s, 3s;</pre>
   <h3>Browser Support</h3>
   <p>CSS animations are supported by <em>all browsers</em> in use today, with the exception of IE 9 and lower and Opera Mini.</p>
   <p>Check out that support: <a href="http://caniuse.com/#feat=css-animation">caniuse.com/#feat=css-animation</a></p>
+
+  <h3>Resources</h3>
+  <p><a href="http://www.css3files.com/animation/">CSS3 Files: Animations</a>&mdash;a handy cheat sheet</a></p>
 </section>
 
 <section class="slide">
@@ -748,7 +791,6 @@ transition-duration: 1s, 3s;</pre>
   <h3>Questions?</h3>
   <p>If you don't have questions, I'm not dazzling you enough. PICK UP THE DAZZLEMENT, RACHEL.</p>
   <img src="img/fig_dazzler.jpg" alt="Dazzler, a Marvel superheroine, in shining unitard and rollerskates." />
-  <!--TODO MOAR DAZZLEMENT-->
 </section>
 
 

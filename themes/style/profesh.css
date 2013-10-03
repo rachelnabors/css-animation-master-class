@@ -116,6 +116,9 @@
       font-family: "OstrichSansMedium", sans-serif;
       border-bottom-color: #858585;
       line-height: .8em; }
+    .deck-container .slide h2 {
+      font-size: 1.5em;
+      margin-bottom: .25em; }
     .deck-container .slide h3 {
       font-family: "OstrichSansBlack", sans-serif;
       color: #888; }
@@ -235,8 +238,21 @@
 
 .cover.timing-functions {
   background: url(../../img/cover_easing.png) no-repeat 0 0;
-  background-size: cover; }
+  background-size: cover;
+  color: #d6e549; }
 
 .cover.scene-transitions {
   background: black url(../../img/cover_transitions.png) no-repeat center center;
+  background-size: auto 100%; }
+
+.cover.walk-cycle {
+  background: url(../../img/cover_walk-cycle.png) no-repeat center center;
+  background-size: cover; }
+
+.cover.cut-outs {
+  background: url(../../img/cover_cutouts.jpg) no-repeat center center;
+  background-size: cover; }
+
+.cover.parallax {
+  background: black url(../../img/cover_parallax.jpg) no-repeat center center;
   background-size: auto 100%; }
