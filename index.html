@@ -1326,21 +1326,6 @@ The Future of Animation and Web Development
 <!-- Required JS files. -->
 <script src="jquery-1.7.2.min.js"></script>
 <script src="core/deck.core.js"></script>
-
-<!-- Extension JS files. Add or remove as needed. -->
-<script src="core/deck.core.js"></script>
-<script src="extensions/hash/deck.hash.js"></script>
-<script src="extensions/menu/deck.menu.js"></script>
-<script src="extensions/goto/deck.goto.js"></script>
-<script src="extensions/status/deck.status.js"></script>
-<script src="extensions/navigation/deck.navigation.js"></script>
-<script src="extensions/scale/deck.scale.js"></script>
-<script src="extensions/pointer/deck.pointer.js"></script>
-<script src="extensions/syntaxhighlighter/deck.syntaxhighlighter.js"></script>
-<script src="extensions/iframes/deck.iframes.js"></script>
-<!-- <script type="text/javascript" src="extensions/presenterview/deck.presenterview.js"></script> -->
-<!-- Initialize the deck. You can put this in an external file if desired. -->
-
 <script>
   // https://github.com/imakewebthings/deck.js/issues/134#issuecomment-25665129
   // A patch to keep it from crashing iPads/running slowly. Hopefully not forever.
@@ -1388,9 +1373,29 @@ The Future of Animation and Web Development
     })
     .bind('deck.change', updateHorizon);
 
-    $.deck('.slide');
   })(jQuery, 'deck');
 
 </script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="core/deck.core.js"></script>
+<script src="extensions/hash/deck.hash.js"></script>
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+<script src="extensions/pointer/deck.pointer.js"></script>
+<script src="extensions/syntaxhighlighter/deck.syntaxhighlighter.js"></script>
+<script src="extensions/iframes/deck.iframes.js"></script>
+<!-- <script type="text/javascript" src="extensions/presenterview/deck.presenterview.js"></script> -->
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+
+<script>
+  (function(){
+    $.deck('.slide');
+  })();
+</script>
+
 </body>
 </html>
