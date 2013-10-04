@@ -193,6 +193,10 @@
   .deck-container .cover .vtop em {
     font-size: .3em;
     line-height: 0; }
+  .deck-container .cover a:link, .deck-container .cover a:visited, .deck-container .cover a:hover, .deck-container .cover a:active {
+    color: #82e4ff; }
+  .deck-container .cover a:hover, .deck-container .cover a:active {
+    background: #141f31; }
   .deck-container .deck-prev-link, .deck-container .deck-next-link {
     background: #858585;
     font-family: serif; }
@@ -234,6 +238,26 @@
 
 .cover.quote-disney {
   background: url(../../img/quote_disney.jpg) no-repeat 0 0;
+  background-size: cover; }
+
+.cover.z-axis {
+  background: url(../../img/cover_zaxis.jpg) no-repeat 0 0;
+  background-size: cover; }
+
+.cover.skeuomorphism {
+  background: white url(../../img/cover_skeuomorphism.png) no-repeat center center;
+  background-size: cover; }
+
+.cover.cinematic {
+  background: url(../../img/cover_cinematic.png) no-repeat 0 0;
+  background-size: cover; }
+
+.cover.modeling {
+  background: url(../../img/cover_model.png) no-repeat 0 0;
+  background-size: cover; }
+
+.cover.storyboard {
+  background: url(../../img/cover_storyboards.jpg) no-repeat 0 0;
   background-size: cover; }
 
 .cover.timing-functions {

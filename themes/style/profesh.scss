@@ -262,6 +262,12 @@ $grey: #858585;
 			font-size: .3em;
 			line-height: 0;
 		}
+		a:link, a:visited, a:hover, a:active { 
+			color: lighten($link, 20%);
+		}
+		a:hover, a:active { 
+			background: $canvas_black;
+		}
 	}
 
 	.deck-prev-link, .deck-next-link {
@@ -326,6 +332,32 @@ $grey: #858585;
 
 .cover.quote-disney {
 	background: url(../../img/quote_disney.jpg) no-repeat 0 0;
+	background-size: cover;
+}
+
+// UI slides
+.cover.z-axis {
+	background: url(../../img/cover_zaxis.jpg) no-repeat 0 0;
+	background-size: cover;
+}
+
+.cover.skeuomorphism {
+	background: #fff url(../../img/cover_skeuomorphism.png) no-repeat center center;
+	background-size: cover;
+}
+
+.cover.cinematic {
+	background: url(../../img/cover_cinematic.png) no-repeat 0 0;
+	background-size: cover;
+}
+
+.cover.modeling {
+	background: url(../../img/cover_model.png) no-repeat 0 0;
+	background-size: cover;
+}
+
+.cover.storyboard {
+	background: url(../../img/cover_storyboards.jpg) no-repeat 0 0;
 	background-size: cover;
 }
 
