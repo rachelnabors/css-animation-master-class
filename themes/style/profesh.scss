@@ -144,6 +144,10 @@ $grey: #858585;
 				padding-top: .25em;
 				text-align: left;
 			}
+			blockquote {
+				border: 0;
+				cite {color:#fff}
+			}
 		}
 
 		h2, .tagline {

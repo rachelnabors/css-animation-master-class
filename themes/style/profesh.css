@@ -112,6 +112,10 @@
       font-size: 3em;
       padding-top: .25em;
       text-align: left; }
+    .deck-container .slide .vcenter blockquote {
+      border: 0; }
+      .deck-container .slide .vcenter blockquote cite {
+        color: #fff; }
     .deck-container .slide h2, .deck-container .slide .tagline {
       font-family: "OstrichSansMedium", sans-serif;
       border-bottom-color: #858585;
