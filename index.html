@@ -1078,19 +1078,14 @@ The Future of Animation and Web Development
 
 <section class="slide">
   <h2>Interactions</h2>
-  <h3>Controlling with JavaScript</h3>
-  <p>The downside to the methods we have covered is they can't &ldquo;sense&rdquo; where in the animation you are.</p>
-</section>
-
-<section class="slide">
-  <h2>Interactions</h2>
   <h3>Pausing with JavaScript</h3>  
-  <p>You could do this with plain JavaScript using <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.getComputedStyle" target="_blank"><code>getComputedStyle</code> and <code>getPropertyValue</code></a> in tandem. (Good example <a href="http://codepen.io/Zeaklous/pen/GokAm?editors=001" target="_blank">here</a>.)</p>
+  <p>Not as hard as it sounds!</p>
   <ol class="slide">
     <li>Record the current state of your animations/transitions</li>
     <li>Remove the state class to put a stop to them.</li>
     <li>Slap the recorded values on the animated objects.</li>
   </ol>
+  <p class="slide">You could do this with jQuery or even plain JavaScript using <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.getComputedStyle" target="_blank"><code>getComputedStyle</code> and <code>getPropertyValue</code></a>. (Good example <a href="http://codepen.io/Zeaklous/pen/GokAm?editors=001" target="_blank">here</a>.)</p>
 
   <div class="slide">
     <h3>Exercise: Pause the kitty</h3>
@@ -1102,7 +1097,24 @@ The Future of Animation and Web Development
 <section class="slide">
   <h2>Interactions</h2>
   <h3>CSS's &ldquo;Callback Functions&rdquo;</h3>  
-  <!--TODO-->
+  <p>The downside to the methods we have covered is they can't &ldquo;sense&rdquo; where in the animation you are.</p>
+  <p>Look out of step this is: <a href="http://codepen.io/rachelnabors-teaching/pen/Bfvwg" target="_blank">codepen.io/rachelnabors-teaching/pen/Bfvwg</a></p>
+  <div class="slide">
+    <p>Thankfully, animations and transitions <em>do</em> trigger events:</p>
+    <ul>
+      <li><strong>Animations</strong> animationEnd, animationStart, and animationIteration</li>
+      <li><strong>Transitions</strong> transitionEnd</li>
+    </ul>
+    <p class="slide">Naturally, they're all prefixed right now. Bleh.</p>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>Interactions</h2>
+  <h3>Exercise: Use a &ldquo;Callback Functions&rdquo;</h3>  
+  <p>Using <code>AnimationIteration</code>, make the cat sit at the end of his walk cycle.</p>
+  <p>Start coding: <a href="http://codepen.io/rachelnabors-teaching/pen/tjfmu" target="_blank">codepen.io/rachelnabors-teaching/pen/tjfmu</a></p>
+  <p class="slide">Here's how I did it: <a href="http://codepen.io/rachelnabors-teaching/pen/aruLt?editors=011" target="_blank"></a></p>
 </section>
 
 <section class="slide">
@@ -1111,6 +1123,7 @@ The Future of Animation and Web Development
   <ul>
     <li><a href="http://css-tricks.com/the-checkbox-hack/" target="_blank">The Checkbox Selector Hack</a> on CSS Tricks</li>
     <li><a href="http://css-tricks.com/controlling-css-animations-transitions-javascript/" target="_blank">Controlling CSS Animations and Transitions with JavaScript</a> CSS Trick article</li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events" target="_blank">Mozilla Developers Network Events Reference</a></li>
   </ul>
 </section>
 
@@ -1137,12 +1150,14 @@ The Future of Animation and Web Development
 
 <section class="slide">
   <h2>Performance</h2>
-   <h3>Enable Chrome's <abbr title="frames per second">FPS</abbr> counter</h3>
+   <h3>Checkout Chrome's <abbr title="frames per second">FPS</abbr> counter</h3>
+   <p>Without forcing hardware acceleration:</p>
     <ol>
       <li>Put <strong>about:flags</strong> into the address bar and go</li>
       <li>enable the <strong>FPS counter</strong></li>
       <li>Hit the “Relaunch now” button at bottom of page</li>
     </ol>
+  <p>There's an option to enable one that forces hardware acceleration in your dev tools, under the gear icon, General &gt; Rendering.</p>
 </section>
 
 <section class="slide">
@@ -1162,7 +1177,7 @@ The Future of Animation and Web Development
 
 <section class="slide">
   <h2>Performance</h2>
-  <h3>Why Hardware <del>Acceleration</del> Coercion is a bad idea</h3>
+  <h3>Why Hardware <del>Acceleration</del> Coercion could be a bad idea</h3>
   <ul>
     <li class="slide">Different OSes and browsers optimize things differently</li>
     <li class="slide">Adds code bulk</li>
