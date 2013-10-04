@@ -748,6 +748,8 @@ transition-duration: 1s, 3s;</pre>
       <li><a href="http://markdalgleish.com/projects/stellar.js/" target="_blank">Stellar.js</a>, another JavaScript/parallax tool</li></section>
     </ul>
   </div>
+</section>
+
 <section class="slide">
   <h2>CSS Animations</h2>
   <h3>Questions?</h3>
@@ -886,7 +888,7 @@ The Future of Animation and Web Development
   <p>Nest this inside our <code>window.load()</code> function to wait until both the window has been painted and the music is ready to play:</p>
   <pre class="language-javascript">song.addEventListener("canplaythrough", function () {}, false);</pre>
 
-  <p>Start coding: <a href="http://codepen.io/rachelnabors-teaching/pen/xGoAH" target="_blank">codepen.io/rachelnabors-teaching/pen/xGoAH</a>
+  <p>Start coding: <a href="http://codepen.io/rachelnabors-teaching/pen/xGoAH" target="_blank">codepen.io/rachelnabors-teaching/pen/xGoAH</a></p>
 </section>
 
 <section class="slide">
@@ -1161,6 +1163,7 @@ The Future of Animation and Web Development
 }
 </pre>
   </div>
+  <p class="slide">You can also &ldquo;bake&rdquo; things in the GPU, like with <a href="http://codepen.io/rachelnabors/pen/qnEhd?editors=110" target="_blank">The Hipster Rabbit Hole</a>.</p>
 </section>
 
 <section class="slide">
@@ -1185,13 +1188,14 @@ The Future of Animation and Web Development
     <li>Check <strong>show paint rectangles</strong> under <strong>Rendering</strong></li>
   </ol>
   <p class="slide">Now have a second look at <a href="http://rachelnabors.com/nyantuna/" target="_blank">NyanTuna</a> with the web inspector open</p>
-  <p class="slide">Paint rectangles show what's being repainted. Fewer rectangles != always better.</p>
+  <p class="slide">Red paint rectangles show what's being repainted by the CPU.</p>
 </section>
 
 <section class="slide">
   <h2>Performance</h2>
   <h3>Investigating with Timeline</h3>
   <p>Check out <a href="http://rachelnabors.com/alice-in-videoland/book/">Alice in Videoland</a> with the Dev Tools Timeline.</p>
+  <p class="slide">Record an interaction, and watch how often things break 35 or 60 FPS!</p>
   <div class="slide">
     <h3>Resources</h3>
     <ul>
